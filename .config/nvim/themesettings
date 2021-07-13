@@ -1,0 +1,31 @@
+""
+"" THEME SETTINGS
+""
+"let g:airline_theme='deus'
+set showtabline=2 " always show tabline
+colorscheme nord
+
+" highlight cursor line
+
+set cursorline
+" let airline know we use a powerline font
+let g:airline_powerline_fonts = 1
+" enable tabline
+let g:airline#extensions#tabline#enabled = 1
+" BUG: change dirty symbol away from emoji since it's broken for this font
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.dirty = '~'
+let g:airline_skip_empty_sections = 1 " configure tmuxline options let g:tmuxline_preset = { \'a'           : '#S',
+  \'x'           : '#(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD)',
+  \'y'           : ['%Y-%m-%d', '%H:%M'],
+  \'z'           : '#h',
+  \'win'         : ['#I', '#W],
+  \'cwin'        : ['#I', '#W'],
+  \'options'     : {
+     \'status-justify': 'left'},
+  \'win_options' : {
+     \'window-status-activity-attr': 'none'}
+  \}
+'

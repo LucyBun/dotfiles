@@ -1,0 +1,10 @@
+[directory]
+truncation_length = 8
+truncation_symbol= ".../"
+read_only = "🔒"
+
+[git_branch]
+symbol = "\ue0a0 "
+truncation_length = 8
+truncation_symbol = ""
+remote_branch = 'main'
